@@ -79,3 +79,82 @@ ARRAYS
     3. int[] myarray = new int[3]; myarray[0] = 1; myarray[1] = 2; myarray[2] = 3;.
 
        Correct! The array myarray is declared correctly and the code statements used to assign values to the array elements specify the array index locations.
+
+FOREACH
+
+
+1. Which of the following can be used to access the third element in an array?
+
+    1. myArray[3].
+
+    2. myArray[2].
+
+    Correct! Indexes are zero-based, so an index of two returns the third element in an array.
+
+    3. myArray{3}.
+
+2. Which of the following choices describes the correct way to create a new integer array with three elements?
+
+    1. int[] myArray = new int[3];.
+
+    Correct! This is the correct way to create an array with three elements.
+
+    2. int[] myArray = new int[2];.
+
+    3. int myArray = new int[3];.
+
+3. Which of the following foreach statements is syntactically correct?
+
+    1. foreach (int value in values).
+
+    Correct! This foreach statement is defined using valid syntax.
+
+    2. foreach (int value of values).
+
+    3. foreach (int value with values).
+
+VARIABLE NAMES
+
+
+1. Which of the following is an example of correct camel case formatting of a variable name?
+
+1. UserOption.
+
+2. user Option.
+
+3. userOption.
+
+Correct! This is the correct way to use camel case for a variable.
+
+WHITESPACES
+
+
+1. Which of the following demonstrates recommended guidelines for naming a variable?
+
+    1. my-string.
+
+    2. initialMessage$.
+
+    3. initialMessage.
+
+    Correct! This is the appropriate camel case for a variable name and the name is descriptive.
+
+2. Which of the following is a bad reason to use a code comment?
+
+    1. To describe the high-level intent of the code.
+
+    2. To explain how a new C# keyword works.
+
+C   orrect! Comments should not be used for this reason.
+
+    3. To temporarily comment out a line of code while evaluating a feature in a different way.
+
+3. Which of the following statements about using whitespace in code is true?
+
+    1. Reducing the amount of whitespace will improve code performance (execution speed).
+
+    2. Whitespace should be used every two or three lines to separate code lines.
+
+    3. Whitespace should be used judiciously to improve the readability of your code.
+
+        Correct! Whitespace should be used to improve core readability.

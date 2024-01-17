@@ -6,22 +6,30 @@
         {
             Console.WriteLine("Student Grading System\n\n");
             //1.  initialize variables - graded assignments 
-            int currentAssignments = 5;
+            int examAssignments = 5;
 
-            int[] sophiaScores = new int[] { 90, 86, 87, 98, 100 };
-            int[] andrewScores = new int[] {92, 89, 81, 96, 90};
-            int[] emmaScores = new int[] { 90, 85, 87, 98, 68 };
-            int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
+            int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+            int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
+            int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
+            int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
+            int[] beckyScores = new int[] { 92, 91, 90, 91, 92, 92, 92 };
+            int[] chrisScores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
+            int[] ericScores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
+            int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 };
 
             //2.  Student Names Array
-            string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
+            string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
+
+            //3. Intializing Student Array
 
             int[] studentScores = new int[10];
 
+            //4. Initializing Stdent Grade string
             string currentStudentLetterGrade = "";
 
             Console.WriteLine("Student\t\tScore\t\tGrade\n");
 
+            
             foreach (string name in studentNames)
                 {
                    string currentStudent = name;
@@ -37,17 +45,46 @@
 
                     else if (currentStudent == "Logan")
                         studentScores = loganScores;    
-                    
+                    else if (currentStudent == "Becky")
+                        studentScores = beckyScores;
+                    else if (currentStudent == "Chris")
+                        studentScores = chrisScores;
+                    else if (currentStudent == "Eric")
+                        studentScores = ericScores;
+                    else if (currentStudent == "Gregor")
+                        studentScores = gregorScores;
+                    else
+                        continue;
+                        
+                    //5. Initializing Sum
                     int sumAssignmentScores = 0;
 
+                    //6. Initializing Average of exam and extra credit score
                     decimal currentStudentGrade = 0;
+
+                    //7. initializing counter for the number of assignments
+                    int gradedAssignments = 0;
+
+                    //8. Calculating the sum of each student's exam assignment scores and adding 10% of extra graded assignment score
                     
                     foreach (int score in studentScores)
                         {
-                            sumAssignmentScores += score;
+                             //9. incrementing the assignment counter
+                            gradedAssignments += 1;
+
+                            if (gradedAssignments <= examAssignments)
+                                
+                                //10. adding the exam score to the sum
+                                sumAssignmentScores += score;
+
+                            else
+                                //11. adding the extra 10% bonus points to exam score
+                                sumAssignmentScores += score / 10;
                         }
 
-                    currentStudentGrade = (decimal)(sumAssignmentScores) / currentAssignments;
+                    //12. Calculating the average of the student's assignment scores and Assigning the Grade
+
+                    currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
 
                     if (currentStudentGrade >= 97)
                         currentStudentLetterGrade = "A+";
@@ -87,57 +124,13 @@
 
                     else
                         currentStudentLetterGrade = "F";
-                       
+
+                    //13. Title for the Grade Report   
                     Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t\t{currentStudentLetterGrade}");
                 }
                 
             
-            /*
-            int sophiaSum = 0;
-            int andrewSum = 0;
-            int emmaSum = 0;
-            int loganSum = 0;
-
-            decimal sophiaScore;
-            decimal andrewScore;
-            decimal emmaScore;
-            decimal loganScore;
-
-            //2. Calculate the sum of each student's assignment scores
-           
-            sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
-            andrewSum = andrew1 + andrew2 + andrew3 + andrew4 + andrew5;
-            emmaSum = emma1 + emma2 + emma3 + emma4 + emma5;
-            loganSum = logan1 + logan2 + logan3 + logan4 + logan5;
-
-            Console.WriteLine("Student Assignment Summation\n");
-            Console.WriteLine("Sophia: " + sophiaSum);
-            Console.WriteLine("Andrew: " + andrewSum);
-            Console.WriteLine("Emma: " + emmaSum);
-            Console.WriteLine("Logan: " + loganSum);
-
-            //3. Calculate the average of the student's assignment scores
-
-            sophiaScore = (decimal)sophiaSum / currentAssignments;
-            andrewScore = (decimal)andrewSum / currentAssignments;
-            emmaScore = (decimal)emmaSum / currentAssignments;
-            loganScore = (decimal)loganSum / currentAssignments;
-
-            Console.WriteLine("\nStudent Average\n");
-            Console.WriteLine("Sophia: " + sophiaScore);
-            Console.WriteLine("Andrew: " + andrewScore);
-            Console.WriteLine("Emma: " + emmaScore);
-            Console.WriteLine("Logan: " + loganScore);
-
-            //4. Grade Assignment
-
-            Console.WriteLine("\nStudent\t\tGrade\n");
-            Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
-            Console.WriteLine("Andrew:\t\t" + andrewScore + "\tB+");
-            Console.WriteLine("Emma:\t\t" + emmaScore + "\tB");
-            Console.WriteLine("Logan:\t\t" + loganScore + "\tA-");
-
-            */
+            //14. To keep the Console Window Active
             Console.WriteLine("Press the Enter key to continue");
             Console.ReadLine();
 

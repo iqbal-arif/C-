@@ -57,3 +57,25 @@ IF Statements
 
     c. The else statement is required when an if statement includes an else if.
 
+ARRAYS
+
+
+1. What is an array?
+
+    1. A string variable.
+
+    2. A sequence of individual data elements accessible through a single variable name.
+
+       Correct. An array data structure with a single name and multiple data locations.
+
+    3. A .NET Class Library.
+
+2. Which of these is a correct example of creating an array and initializing it?
+
+    1. string[] myarray = new string[3]; myarray = "test1"; myarray = "test2"; myarray = "test3";.
+
+    2. string[] myarray = string[3]; myarray[0] = test1; myarray[1] = test2; myarray[2] = test3;.
+
+    3. int[] myarray = new int[3]; myarray[0] = 1; myarray[1] = 2; myarray[2] = 3;.
+
+       Correct! The array myarray is declared correctly and the code statements used to assign values to the array elements specify the array index locations.

@@ -27,7 +27,7 @@
             //4. Initializing Stdent Grade string
             string currentStudentLetterGrade = "";
 
-            Console.WriteLine("Student\t\tScore\t\tGrade\n");
+            Console.WriteLine("Student\t\tExam Score\t\tOverall Grade\t\tExtra Credit\n");
 
             
             foreach (string name in studentNames)
@@ -57,34 +57,50 @@
                         continue;
                         
                     //5. Initializing Sum
-                    int sumAssignmentScores = 0;
+                    double sumAssignmentScores = 0;
+                    int examScore = 0;
 
                     //6. Initializing Average of exam and extra credit score
-                    decimal currentStudentGrade = 0;
+                    double currentStudentGrade = 0;
+                    int totalExamScore = 0;
+                    int totalExtraPoints = 0;
 
                     //7. initializing counter for the number of assignments
                     int gradedAssignments = 0;
+                    int extraCreditAssignments = 0;
+                    int extraCreditPointTotal = 0;
 
                     //8. Calculating the sum of each student's exam assignment scores and adding 10% of extra graded assignment score
                     
+                    // int extraCredit = 0;
+                    int extraCreditPoint = 0;
                     foreach (int score in studentScores)
                         {
                              //9. incrementing the assignment counter
                             gradedAssignments += 1;
 
                             if (gradedAssignments <= examAssignments)
-                                
+                                {
                                 //10. adding the exam score to the sum
                                 sumAssignmentScores += score;
-
+                                examScore += score;
+                                }
                             else
+                            {
+                                extraCreditAssignments +=1;
                                 //11. adding the extra 10% bonus points to exam score
-                                sumAssignmentScores += score / 10;
+                                sumAssignmentScores += (double) score / 10;
+                                extraCreditPoint += score;
+                            }
                         }
 
                     //12. Calculating the average of the student's assignment scores and Assigning the Grade
-
-                    currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
+                    // Console.WriteLine($"{currentStudent}\t\t\t{totalExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{totalExtraPoints} ({extraCreditPointTotal} pts)");
+                    // Console.WriteLine(sumAssignmentScores);
+                    //  totalExamScore = examScore / examAssignments;
+                    //  totalExtraPoints = extraCreditPoint / extraCreditAssignments;
+                     currentStudentGrade =   sumAssignmentScores / (double) examAssignments;
+                    //  extraCreditPointTotal = currentStudentGrade - totalExamScore;
 
                     if (currentStudentGrade >= 97)
                         currentStudentLetterGrade = "A+";
@@ -126,14 +142,14 @@
                         currentStudentLetterGrade = "F";
 
                     //13. Title for the Grade Report   
-                    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t\t{currentStudentLetterGrade}");
+                    Console.WriteLine($"{currentStudent}\t\t\t{totalExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{totalExtraPoints} ({extraCreditPointTotal} pts)");
                 }
                 
             
             //14. To keep the Console Window Active
             Console.WriteLine("Press the Enter key to continue");
             Console.ReadLine();
-
+          
 
         }
     }

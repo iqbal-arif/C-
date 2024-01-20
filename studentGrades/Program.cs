@@ -99,7 +99,7 @@
                     // Console.WriteLine(sumAssignmentScores);
                     //  totalExamScore = examScore / examAssignments;
                     //  totalExtraPoints = extraCreditPoint / extraCreditAssignments;
-                     currentStudentGrade =   sumAssignmentScores / (double) examAssignments;
+                     currentStudentGrade = Math.Round(  sumAssignmentScores / (double) examAssignments,2);
                     //  extraCreditPointTotal = currentStudentGrade - totalExamScore;
 
                     if (currentStudentGrade >= 97)

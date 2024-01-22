@@ -16,12 +16,13 @@ Console.WriteLine(battleTurn);
 do
     {
 
-        heroTurn = battleDice.Next(1,11);
-        monsterHealth = monsterHealth - heroTurn;
-        Console.WriteLine($"Hero Turn : {heroTurn} ::: Monster Health {monsterHealth}")
-    }
-    while (monsterHealth <= 7);
+        heroTurn = battleDice.Next(0,11);
 
-    monsterLost = monsterLost 
+        Console.WriteLine($"Hero Turn : {heroTurn} ::: Monster Health {monsterHealth}");
+    }
+    while (heroTurn <= 1 || heroTurn >= 11);
+          monsterHealth -= ;
+
+    // monsterLost = monsterLost 
 
 Console.WriteLine($"Monster was damaged and lost {monsterLost} health and now has {monsterHealth} health.\n");

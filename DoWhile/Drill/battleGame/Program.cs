@@ -18,16 +18,19 @@ int heroTurn = 0;
 
         heroTurn = battleDice.Next(0,11);
 
+            Console.WriteLine($"Hero Turn : {heroTurn}");
+        
         if (monsterHealth == heroTurn)
         {
 
             monsterHealth --;
-            monsterLost = monsterHealth;
+            monsterLost ++;
             Console.WriteLine($"Hero Turn : {heroTurn} ::: Monster Health {monsterHealth}");
             Console.WriteLine($"Monster was damaged and lost {monsterLost} health and now has {monsterHealth} health.\n");
         }
-        if (monsterLost == 9)
+        if (monsterLost == 7)
         break;
+        
     }
     while (monsterHealth >= 0 || heroHealth >= 0 );
 

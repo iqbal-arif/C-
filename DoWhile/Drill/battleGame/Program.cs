@@ -10,19 +10,25 @@ Console.WriteLine($"\nHero was damaged and lost {heroLost} health and now has {h
 
 Random battleDice = new Random();
 int heroTurn = 0;
-int monsterTurn = 0;
-Console.WriteLine(battleTurn);
+// int monsterTurn = 0;
+// Console.WriteLine(battleTurn);
 
-do
+    do
     {
 
         heroTurn = battleDice.Next(0,11);
 
-        Console.WriteLine($"Hero Turn : {heroTurn} ::: Monster Health {monsterHealth}");
+        if (monsterHealth == heroTurn)
+        {
+
+            monsterHealth --;
+            monsterLost = monsterHealth;
+            Console.WriteLine($"Hero Turn : {heroTurn} ::: Monster Health {monsterHealth}");
+            Console.WriteLine($"Monster was damaged and lost {monsterLost} health and now has {monsterHealth} health.\n");
+        }
+        if (monsterLost == 9)
+        break;
     }
-    while (heroTurn <= 1 || heroTurn >= 11);
-          monsterHealth -= ;
+    while (monsterHealth >= 0 || heroHealth >= 0 );
 
     // monsterLost = monsterLost 
-
-Console.WriteLine($"Monster was damaged and lost {monsterLost} health and now has {monsterHealth} health.\n");

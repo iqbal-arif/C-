@@ -345,3 +345,49 @@ SWITCH CASE
     2. A switch construct must include a default switch section.
 
     3. The colon at the end of the case label is optional.
+
+LOOP
+*****
+
+
+1. Which of the following for statements is correct?
+
+    1. for (int x = 20: x < 80: x++)
+
+    2. for (int j = 0; j == 80; j + 1)
+
+    3. for (int counter = 20; counter < 80; counter++)
+
+    Correct! This example shows the correct syntax for initializer, condition, and iterator.
+
+2. Which statement can be used to exit out of the for loop?
+
+    1. break;
+
+    Correct! The break keyword can be used to exit a for loop.
+
+    2. exit;
+
+    3. return;
+
+
+3. Which of the following correctly describes a behavior of either a do-while or while iterative statement?
+
+    1. A do-while statement executes a code block zero or more times.
+
+    2. A while statement executes a code block at least once.
+
+    3. A do-while statement executes a code block at least once.
+
+    Correct! The do-while will iterate through a code block at least one time. Code execution will exit the iteration loop once the while expression at the end of the code block evaluates to true.
+
+4. A developer needs to capture user input inside a loop. The user enters the keyboard combination ctrl + Esc to exit the iteration when they're done entering information. Which is the best iteration statement for this purpose?
+
+    1. while
+
+    2. for
+
+    3. do-while
+
+    Correct! The do-while will allow the developer to check each entry by the user until they enter the special keyboard combination to exit.
+

@@ -391,3 +391,61 @@ LOOP
 
     Correct! The do-while will allow the developer to check each entry by the user until they enter the special keyboard combination to exit.
 
+5. 	A developer needs to iterate through an array of items. The number of items in the array is unknown. The code inside the iteration code block examines each item sequentially to select an item that matches specified criteria. The index number of the selected array element is not important. The selected item is referenced multiple times within the code block. Which type of iteration statement is best suited for this scenario?
+
+    1. foreach
+
+    Correct! It's possible to use any of these iteration types for the conditions described, but a foreach is best suited for this scenario. The foreach is easy to implement when the number of array elements is unknown. The foreach is a good choice when the index number of the selected array element isn't important. The foreach might run faster when the selected item is used multiple times within the code block.
+
+    2. for
+
+    3. while
+
+6. A developer needs to capture a list of items from the user. The user will enter the keyboard combination ctrl + Esc to exit. Which is the best iteration statement for this purpose?
+
+    1. foreach
+
+    2. do-while
+
+    Correct! The do-while will allow the code to check each entry by the user until they enter the special keyboard combination to exit.
+
+    3. while
+
+7. A developer needs to iterate through an array of items to find one that matches a certain criteria. Which is the best iteration statement for this purpose?
+
+    1. foreach
+
+    2. for
+
+    3. while
+
+
+8. When is it appropriate to use a switch-case construct rather than a if-elseif-else construct?
+
+    1. A switch-case construct is appropriate when more than 2-3 else if code blocks are required.
+
+    Correct! When more than 2-3 else if code blocks are required, the code can become difficult to read, and the switch-case construct is preferable
+
+    2. A switch-case construct is appropriate when the number of case patterns is small.
+
+    3. A switch-case construct is appropriate when the selection statement is inside a loop.
+
+9. Why should a developer choose a for statement rather than a foreach statement when processing the contents of a multidimensional array?
+
+    1. for statements do a better job of examining each array item separately.
+
+    2. foreach statements do a better job of examining each array item separately.
+
+    3. for statements enable a developer to treat array dimensions separately.
+
+    Correct! When their code is processing the contents of a multidimensional array, a developer often wants to iterate through the array dimensions separately. The for statement provides better support for processing array dimensions separately.
+
+10. Why is it important to scope a variable at its lowest necessary level?
+
+    1. It ensures that a variable that's declared outside of a code block, can be accessed inside the code block before it's been assigned a value.
+
+    2. It ensures that application resources and the security footprint are kept small.
+
+    Correct. Keeping variables scoped at the lowest necessary level enables better resource management and helps to minimize the attack profile of the application.
+
+    3. It ensures that a variable can be accessed within the lowest level code branches of an application.

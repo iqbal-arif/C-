@@ -21,8 +21,8 @@ while (currentDo >= 3)
 {
     Console.WriteLine($"Inside Block {currentDo}");
     currentDo = randomDo.Next(1, 20);
-} 
-    Console.WriteLine($"While Block {currentDo}\n");
+}
+Console.WriteLine($"While Block {currentDo}\n");
 
 
 Console.WriteLine("\nWhile Loop with Continue Statement!\n");
@@ -33,9 +33,9 @@ int currentCount = randomCount.Next(1, 12);
 Console.WriteLine($"\nOuter Random No. : {currentCount}\n");
 do
 {
-Console.WriteLine($"\nInner Random No. : {currentCount}\n");
+    Console.WriteLine($"\nInner Random No. : {currentCount}\n");
     currentCount = randomCount.Next(1, 20);
-Console.WriteLine($"\nNew Inner Random No. : {currentCount}\n");
+    Console.WriteLine($"\nNew Inner Random No. : {currentCount}\n");
 
     if (currentCount >= 8) continue;
 

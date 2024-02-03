@@ -6,6 +6,8 @@ string readInput;
 
 bool isValidString = true;
 
+string designer = "Anders Hejlsberg";
+designer.IndexOf("");
 
 do
 {
